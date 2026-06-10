@@ -1,0 +1,25 @@
+.productgrid{
+    height: 300px;
+    width: 100%;
+}
+h3{
+  font-size: 20px;
+}
+
+.card {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* upar uthta hai */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* shadow */
+}
+
+.productgrid {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .productgrid {
+  transform: scale(1.05); /* image zoom */
+}

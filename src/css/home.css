@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.hero-banner{
+  width:100%;
+  height:100vh;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.35)
+  ),
+  url("../../public/images/banner.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-overlay{
+  max-width:900px;
+  color:white;
+  padding:20px;
+}
+
+.hero-tag{
+  display:inline-block;
+  letter-spacing:4px;
+  font-size:14px;
+  margin-bottom:20px;
+  text-transform:uppercase;
+}
+
+.hero-overlay h1{
+  font-size:5rem;
+  font-weight:300;
+  letter-spacing:4px;
+}
+
+.hero-overlay h2{
+  font-size:3rem;
+  font-weight:300;
+  letter-spacing:8px;
+  margin-bottom:25px;
+}
+
+.hero-overlay p{
+  max-width:600px;
+  margin:0 auto 40px;
+  color:#f1f5f9;
+  line-height:1.8;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.shop-btn{
+  padding:16px 45px;
+  border:none;
+  background:#fff;
+  color:#111;
+  font-weight:600;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.shop-btn:hover{
+  transform:translateY(-5px);
+}
+
+.explore-btn{
+  padding:16px 45px;
+  background:transparent;
+  border:1px solid #fff;
+  color:#fff;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.explore-btn:hover{
+  background:#fff;
+  color:#111;
+}
+
+@media(max-width:768px){
+
+  .hero-overlay h1{
+    font-size:2.8rem;
+  }
+
+  .hero-overlay h2{
+    font-size:1.7rem;
+  }
+
+  .hero-overlay p{
+    font-size:14px;
+  }
+}
+.view-more-container{
+  width:100%;
+  padding:40px 20px;
+}
+
+.view-more-btn{
+  width:100%;
+  height:70px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  border:2px solid #000;
+  color:#000;
+  font-size:18px;
+  font-weight:400px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:0.4s ease;
+}
+
+.view-more-btn:hover{
+  background:#000;
+  color:#fff;
+}

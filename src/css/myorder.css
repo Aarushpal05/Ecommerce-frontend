@@ -1,0 +1,35 @@
+.myorder-page {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.myorder-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.myorder-header p {
+  color: #6c757d;
+}
+
+.recent-order-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.order-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.order-total {
+  font-weight: 600;
+}
+
+.order-preview {
+  color: #495057;
+}
+
+@media (max-width: 576px) {
+  .myorder-header h1 {
+    font-size: 1.9rem;
+  }
+}

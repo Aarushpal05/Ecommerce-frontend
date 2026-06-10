@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.about-section {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1920")
+      center/cover no-repeat;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.overlay {
+    min-height: 100vh;
+    background: rgba(15, 23, 42, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.about-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-subtitle {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.about-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.about-card {
+    width: 330px;
+    padding: 35px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.4s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-12px);
+    background: rgba(255,255,255,0.18);
+}
+
+.about-card h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.about-card p {
+    color: #f1f5f9;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+}
