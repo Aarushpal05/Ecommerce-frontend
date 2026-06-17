@@ -78,7 +78,7 @@ function CategoryList() {
               <div className="card border-0 shadow-sm">
                 <div className="card-body text-center">
                   <img
-                    src={`http://127.0.0.1:8000/${cat.pic}`}
+                    src={`hhttps://ecommerce-backend-1-r8dy.onrender.com/api/${cat.pic}`}
                     alt={cat.name}
                     className="img-fluid categorygrid"
                   />
