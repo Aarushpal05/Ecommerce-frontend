@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const addToCart = (productId, navigate) => {
   const token = localStorage.getItem("access_token");
