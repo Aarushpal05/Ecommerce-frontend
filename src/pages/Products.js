@@ -11,7 +11,7 @@ const Product = ({ limitedProducts = false, showAll = false }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/products/")
+    axios.get("https://ecommerce-backend-1-r8dy.onrender.com/api/products/")
       .then(res => setProducts(res.data))
       .catch(err => console.error(err));
   }, []);
