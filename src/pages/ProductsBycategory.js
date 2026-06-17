@@ -12,7 +12,7 @@ function ProductsByCategory() {
    const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/category_products/${id}/`)
+    axios.get(`https://ecommerce-backend-1-r8dy.onrender.com/api/category_products/${id}/`)
       .then(res => setProducts(res.data))
       .catch(err => console.log(err));
   }, [id]);
