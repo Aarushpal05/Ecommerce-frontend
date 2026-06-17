@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import { useParams } from "react-router-dom";
-import Product from "./Products";
+//import Product from "./Products";
 import { useNavigate } from "react-router-dom";
 
 
