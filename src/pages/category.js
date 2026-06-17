@@ -12,7 +12,7 @@ function CategoryList() {
 
   // Fetch Categories
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/categories/")
+    fetch("https://ecommerce-backend-1-r8dy.onrender.com/api/categories/")
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((err) => console.log(err));
