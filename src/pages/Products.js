@@ -13,7 +13,7 @@ const Product = ({ limitedProducts = false, showAll = false }) => {
   useEffect(() => {
     axios.get("https://ecommerce-backend-1-r8dy.onrender.com/api/products/")
       .then(res => setProducts(res.data))
-      .catch(err => console.error(err));
+      .catch(err => console.error(err)); 
   }, []);
 
   // Display limited or all products
