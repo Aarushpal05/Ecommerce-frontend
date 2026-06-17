@@ -30,7 +30,7 @@ const Product = ({ limitedProducts = false, showAll = false }) => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/add-to-cart/",
+        "https://ecommerce-backend-1-r8dy.onrender.com/api/add-to-cart/",
         {
           product_id: productId,
         },
