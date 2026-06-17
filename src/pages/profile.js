@@ -11,7 +11,7 @@ function Profile() {
     const fetchProfile = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const res = await axios.get("http://localhost:8000/api/profile/", {
+        const res = await axios.get("https://ecommerce-backend-1-r8dy.onrender.com/api/profile/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
