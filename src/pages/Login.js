@@ -14,7 +14,7 @@ function Login() {
     e.preventDefault(); 
  
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/login/", {
+      const res = await axios.post("https://ecommerce-backend-1-r8dy.onrender.com/api/login/", {
         username: email, // Django expects "username"
         password: password,
       });
