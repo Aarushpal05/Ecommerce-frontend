@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -8,24 +8,39 @@ function Cart() {
   const token = localStorage.getItem("access_token");
 
   // FETCH CART
-  const fetchCart = () => {
-    axios
-      .get("https://ecommerce-backend-1-r8dy.onrender.com/api/cart/", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        setCartItems(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const fetchCart = () => {
+  //   axios
+  //     .get("https://ecommerce-backend-1-r8dy.onrender.com/api/cart/", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     })
+  //     .then((res) => {
+  //       setCartItems(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
+  const fetchCart = useCallback(() => {
+  axios
+    .get("https://ecommerce-backend-1-r8dy.onrender.com/api/cart/", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((res) => {
+      setCartItems(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}, [token]);
 
   useEffect(() => {
     fetchCart();
-  }, []);
+  }, [fetchCart]);
 
   // UPDATE QUANTITY
   const updateQuantity = (id, quantity) => {
@@ -33,7 +48,7 @@ function Cart() {
 
     axios
       .put(
-        `http://127.0.0.1:8000/api/cart/update/${id}/`,
+        `https://ecommerce-backend-1-r8dy.onrender.com/api/cart/update/${id}/`,
         {
           quantity: quantity,
         },
@@ -54,7 +69,7 @@ function Cart() {
   // DELETE ITEM
   const deleteItem = (id) => {
     axios
-      .delete(`http://127.0.0.1:8000/api/cart/delete/${id}/`, {
+      .delete(`https://ecommerce-backend-1-r8dy.onrender.com/api/cart/delete/${id}/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
