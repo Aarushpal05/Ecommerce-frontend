@@ -95,7 +95,7 @@ const Product = ({ limitedProducts = false, showAll = false }) => {
               >
 
                 <img
-                  src={`https://ecommerce-backend-1-r8dy.onrender.com/api/${product.pic}`}
+                  src={`https://ecommerce-backend-1-r8dy.onrender.com/${product.pic}`}
                   alt={product.name}
                   className="productgrid"
                 />
